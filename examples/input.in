@@ -1,0 +1,72 @@
+SCAN a 5 5
+1 2 3 4 5
+5 4 3 2 1
+1 2 3 4 5
+5 4 3 2 1
+1 2 3 4 5
+SCAN b 5 5
+-1 -2 -3 -4 -5
+-5 -4 -3 -2 -1
+-1 -2 -3 -4 -5
+-5 -4 -3 -2 -1
+-1 -2 -3 -4 -5
+a + b
+a - b
+a * b
+10 * a
+TRANSPOSE a
+INVERSE a
+RANK a
+GEM a -v
+tmp = TRANSPOSE b
+tmp = tmp + a
+a = tmp
+a = SPLIT a 3 3 0 1
+GEM a
+a = a - b
+a = SPLIT b 3 1 0 3
+a = TRANSPOSE a
+e 3 3 1
+SCAN a 3 3
+-1 -3 5
+2 4 -7
+0 1 -1
+SCAN b 3 3
+-2 -2 -1
+-2 0 -3
+-2 -1 -1
+a * b
+SCAN a 4 3
+1 0 1
+3 2 -5
+0 -1 7
+-1 4 2
+GEM a -v
+scan a 3 4
+1 -1 0 2
+0 0 1 0
+0 2 1 10
+gem a
+scan a 4 4
+1 1 1 1
+1 1 -1 -1
+1 -1 1 -1
+1 -1 -1 1
+determinant a
+inverse a
+b = inverse a
+4 * b
+scan a 4 4
+-1 0 1 0
+-2 1 2 -1
+-3 0 0 0
+-4 2 0 0
+determinant a
+inverse a
+scan a 3 3
+1 2 3
+4 0 1
+2 4 6
+determinant a
+inverse a
+exit
